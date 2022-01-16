@@ -1,0 +1,151 @@
+            $navColor:#111;
+            $themeColor:#fff;
+            $fontfamliy:"Poppins";
+            $iconsColor:#00ff00;
+            .navigation {
+                display: flex;
+                background: $navColor;
+                padding: 5px 10px;
+                justify-content: space-between;
+                .logo {
+                    margin: 10px 40px;
+                    padding: 5px 10px;
+                    a {
+                        color: $themeColor;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        margin-left: 40px;
+                        padding-top: 20px;
+                        font-size: 20px;
+                        .cart {
+                            color: $iconsColor;
+                        }
+                    }
+                }
+                .met-store-menu {
+                    margin: 10px 40px;
+                    padding: 5px 10px;
+                    .nav-menu li {
+                        list-style: none;
+                        display: inline;
+                        padding-top: 20px;
+                        margin-left: 10px;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .toggle {
+                    margin: 10px 40px;
+                    padding: 5px 10px;
+                    display: none;
+                    .cancel {
+                        color: $themeColor;
+                        font-size: 18px;
+                        &:hover {
+                            color: $iconsColor;
+                        }
+                    }
+                    .bars {
+                        color: $themeColor;
+                        font-size: 18px;
+                        &:hover {
+                            color: $iconsColor;
+                        }
+                    }
+                }
+            }
+            
+            .met-store-head {
+                display: flex;
+                height: 60px;
+                width: 100vw;
+                background: $themeColor;
+                // position: absolute;
+                justify-content: space-between;
+                border-bottom: 1px solid $navColor;
+                .contacts {
+                    margin: 10px 40px;
+                    padding: 5px 10px;
+                    ul li {
+                        list-style: none;
+                        display: inline;
+                        margin-left: 5px;
+                        .icons {
+                            color: $iconsColor;
+                        }
+                        span {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .social-media {
+                    margin: 10px 40px;
+                    padding: 5px 10px;
+                    ul li {
+                        list-style: none;
+                        display: inline;
+                        margin-left: 5px;
+                        a img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            
+            .frm-register {
+                margin-top: 40px;
+            }
+            
+            @media(max-width:960px) {
+                .met-store-head {
+                    display: flex;
+                    height: 100px;
+                    width: 100vw;
+                    position: absolute;
+                    justify-content: space-between;
+                    .social-media {
+                        margin: 10px 20px;
+                        padding: 5px;
+                    }
+                    .contacts {
+                        margin: 10px 30px;
+                        padding: 5px;
+                        ul li {
+                            list-style: none;
+                            display: inline;
+                            margin-left: 5px;
+                            .icons {
+                                color: #00ff00;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .navigation {
+                    display: flex;
+                    background: $navColor;
+                    padding: 5px 10px;
+                    .logo {
+                        margin: 10px;
+                        padding: 3px;
+                        a {
+                            color: $themeColor;
+                            text-transform: capitalize;
+                            text-decoration: none;
+                            margin-left: 10px;
+                            padding-top: 10px;
+                            font-size: 15px;
+                        }
+                    }
+                    .met-store-menu {
+                        display: none;
+                    }
+                    .toggle label .bars {
+                        display: block;
+                    }
+                }
+            }

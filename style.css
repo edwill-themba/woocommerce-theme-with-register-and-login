@@ -1,0 +1,35 @@
+/*
+Theme Name: MET Store Theme
+Theme URI: http://met-themes.com/themes/store
+Author: Edwill Themba
+Author URI:  http://met-themes.com/
+Description: This theme is for any kind of from fashion,electronics,grocery,pharmarcy or fitness store .
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black,right-sidebar,  editor-style, featured-images, microformats, post-formats,custom-registratio,custom-login
+Text Domain: store-themes
+
+This theme, like WordPress, is licensed under the GPL.
+Use it for your store.
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html body {
+    font-family: Poppins;
+    font-weight: 900;
+}
+
+.form-row {
+    margin: 10px;
+    padding: 5px;
+}
+
+#error {
+    color: #ff0000;
+    font-size: 18px;
+}
