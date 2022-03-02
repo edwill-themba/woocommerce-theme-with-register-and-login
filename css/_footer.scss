@@ -1,0 +1,45 @@
+footer {
+    height: auto;
+    background: #111;
+    font-family: Poppins;
+    display: flex;
+    margin: 0px;
+    color: #fff;
+    .website-information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        h4 {
+            font-size: 16px;
+        }
+        .info {
+            margin-top: 20px;
+            padding: auto 0px;
+            margin-left: 20px;
+            width: 250px;
+            height: 300px;
+            .info-list {
+                text-align: left;
+                margin-left: 0px;
+                li {
+                    list-style: none;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    .website-information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        flex-direction: row;
+        flex-shrink: inherit;
+        flex-wrap: wrap;
+    }
+}

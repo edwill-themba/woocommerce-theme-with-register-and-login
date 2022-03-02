@@ -28,6 +28,8 @@
       wp_enqueue_script('bootstrap');
       wp_register_script('font-awesome',get_template_directory_uri().'/js/all.js','bootstrap',true);
       wp_enqueue_script('font-awesome');
+      wp_register_script('app',get_template_directory_uri().'/js/app.js','font-awesome',true);
+      wp_enqueue_script('app');
   }
   add_action('wp_enqueue_scripts','wp_met_store_scripts');
 

@@ -6,12 +6,28 @@
     <title><?php bloginfo('name') ?></title>
     <?php wp_head(); ?>
 </head>
-<body>
-  <header>
-      <nav class="navigation">
-           <div class="logo">
-               <a href="<?php home_url() ?>"><?php bloginfo('name') ?><i class="fas fa-cart-plus cart"></i></a>
-           </div>
+<body <?php body_class('test') ?>>
+  <header class="sticky-top">
+      <div class="information">
+        <div class="deliver-info">
+           Free Delivery Around South Africa
+        </div>
+        <div class="find-store">
+           Directions To Our Store <a href="#"><img src="<?php bloginfo('template_directory') ?>/images/direction.png"></a>
+        </div>
+      </div>
+      <div class="search">
+         <div class="logo">
+               <a href="<?php home_url() ?>"><?php echo get_theme_mod('logo_text', 'METStore') ?><i class="fas fa-cart-plus cart"></i></a>
+         </div>
+         <div class="search-form">
+             <?php get_search_form(); ?>
+         </div>
+         <div class="contacts">
+             <i class="fas fa-phone icons"></i><span><?php echo get_theme_mod('telephone','013-712-4642') ?></span>
+         </div>
+      </div>
+      <div class="navigation">
            <div class="met-store-menu">
               <?php
                 wp_nav_menu( 
@@ -24,28 +40,10 @@
             <div class="toggle">
                <input type="checkbox" id="checkbox" class="checkbox">
                <label for="checkbox">
-                 <i class="fas fa-bars bars"></i>
-                 <i class="fas fa-times cancel"></i>
+                 <i class="fas fa-bars bars" onClick="add_active_class()"></i>
+                 <i class="fas fa-times cancel" onClick="remove_active_class()"></i>
                </label>
             </div>
-       </nav>
-       <div class="met-store-head">
-         <div class="contacts">
-             <ul>
-                <li><i class="fas fa-phone icons"></i><span>(013)712462</span></li>
-                <li><i class="fas fa-envelope icons"></i><span>info@met-store.co.za</span></li>
-             </ul>
-         </div>
-         <div class="social-media">
-           <ul>
-              Follow Us On
-              <li><a href="#"><img src="<?php bloginfo('template_directory') ?>/images/f.jpg"></a></li>
-              <li><a href="#"><img src="<?php bloginfo('template_directory') ?>/images/ist-icon.jpg"></a></li>
-              <li><a href="#"><img src="<?php bloginfo('template_directory') ?>/images/linkedlnn.png"></a></li>
-              <li><a href="#"><img src="<?php bloginfo('template_directory') ?>/images/t-icon.png"></a></li>
-           </ul>
-          </div>
-       </div>
-       <!-- end contacts and social media -->
-  </header>
+        </div>
+   </header>
   <div class="container">

@@ -1,151 +1,229 @@
-            $navColor:#111;
-            $themeColor:#fff;
-            $fontfamliy:"Poppins";
-            $iconsColor:#00ff00;
-            .navigation {
-                display: flex;
-                background: $navColor;
-                padding: 5px 10px;
-                justify-content: space-between;
-                .logo {
-                    margin: 10px 40px;
-                    padding: 5px 10px;
-                    a {
-                        color: $themeColor;
-                        text-transform: capitalize;
-                        text-decoration: none;
-                        margin-left: 40px;
-                        padding-top: 20px;
-                        font-size: 20px;
-                        .cart {
-                            color: $iconsColor;
-                        }
-                    }
-                }
-                .met-store-menu {
-                    margin: 10px 40px;
-                    padding: 5px 10px;
-                    .nav-menu li {
-                        list-style: none;
-                        display: inline;
-                        padding-top: 20px;
-                        margin-left: 10px;
-                        a {
-                            font-size: 16px;
-                        }
-                    }
-                }
-                .toggle {
-                    margin: 10px 40px;
-                    padding: 5px 10px;
-                    display: none;
-                    .cancel {
-                        color: $themeColor;
-                        font-size: 18px;
-                        &:hover {
-                            color: $iconsColor;
-                        }
-                    }
-                    .bars {
-                        color: $themeColor;
-                        font-size: 18px;
-                        &:hover {
-                            color: $iconsColor;
-                        }
-                    }
-                }
-            }
-            
-            .met-store-head {
-                display: flex;
-                height: 60px;
-                width: 100vw;
-                background: $themeColor;
-                // position: absolute;
-                justify-content: space-between;
-                border-bottom: 1px solid $navColor;
-                .contacts {
-                    margin: 10px 40px;
-                    padding: 5px 10px;
-                    ul li {
-                        list-style: none;
-                        display: inline;
-                        margin-left: 5px;
-                        .icons {
-                            color: $iconsColor;
-                        }
-                        span {
-                            margin-left: 5px;
-                        }
-                    }
-                }
-                .social-media {
-                    margin: 10px 40px;
-                    padding: 5px 10px;
-                    ul li {
-                        list-style: none;
-                        display: inline;
-                        margin-left: 5px;
-                        a img {
-                            width: 20px;
-                            height: 20px;
-                        }
-                    }
-                }
-            }
-            
-            .frm-register {
-                margin-top: 40px;
-            }
-            
-            @media(max-width:960px) {
-                .met-store-head {
-                    display: flex;
-                    height: 100px;
-                    width: 100vw;
-                    position: absolute;
-                    justify-content: space-between;
-                    .social-media {
-                        margin: 10px 20px;
-                        padding: 5px;
-                    }
-                    .contacts {
-                        margin: 10px 30px;
-                        padding: 5px;
-                        ul li {
-                            list-style: none;
-                            display: inline;
-                            margin-left: 5px;
-                            .icons {
-                                color: #00ff00;
-                            }
-                            span {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                .navigation {
-                    display: flex;
-                    background: $navColor;
-                    padding: 5px 10px;
-                    .logo {
-                        margin: 10px;
-                        padding: 3px;
-                        a {
-                            color: $themeColor;
-                            text-transform: capitalize;
-                            text-decoration: none;
-                            margin-left: 10px;
-                            padding-top: 10px;
-                            font-size: 15px;
-                        }
-                    }
-                    .met-store-menu {
-                        display: none;
-                    }
-                    .toggle label .bars {
-                        display: block;
-                    }
-                }
-            }
+     @import './_woocommerce.scss';
+     @import './_footer.scss';
+     @import './_content.scss';
+     $navColor:#111;
+     $themeColor:#fff;
+     $iconsColor:#29e870;
+     $hoveColor:#087530;
+     $information:rgb(51, 46, 46);
+     $infomation-font-family:Poppins;
+     header {
+         background-color: #fff;
+     }
+     
+     .information {
+         display: flex;
+         background: $navColor;
+         height: 50px;
+         font-family: $infomation-font-family;
+         justify-content: space-between;
+         font-weight: 500;
+         font-size: 13px;
+         color: $themeColor;
+         .find-store {
+             padding: 10px 20px;
+             margin-right: 50px;
+             margin-top: 3px;
+             img {
+                 margin-top: 0px;
+                 padding-top: 0px;
+                 height: 20px;
+                 width: 20px;
+             }
+         }
+         .deliver-info {
+             margin-left: 50px;
+             padding: 10px 20px;
+             margin-top: 3px;
+         }
+     }
+     
+     .search {
+         height: 70px;
+         display: flex;
+         justify-content: space-between;
+         border-bottom: 1px solid $hoveColor;
+         .logo {
+             margin-top: 16px;
+             margin-left: 60px;
+             a {
+                 font-family: $infomation-font-family;
+                 font-size: 25px;
+                 text-transform: uppercase;
+                 text-decoration: none;
+                 color: $navColor;
+                 & a:hover {
+                     color: $hoveColor;
+                 }
+                 .cart {
+                     font-size: 20px;
+                     color: $hoveColor;
+                 }
+             }
+         }
+         .search-form {
+             margin-top: 20px;
+             margin-left: 25px;
+             margin-right: 10px;
+             text-align: center;
+             input[type="text"] {
+                 background-color: red;
+                 height: 30px;
+                 width: 400px;
+                 border: none;
+                 font-family: myriadpro-bold;
+             }
+             input[type="submit"] {
+                 background: $hoveColor;
+                 color: $themeColor;
+                 height: 30px;
+                 width: 100px;
+                 border: none;
+                 font-family: $infomation-font-family;
+             }
+         }
+         .contacts {
+             margin-top: 25px;
+             margin-left: 10px;
+             margin-right: 50px;
+             text-align: center;
+             .icons {
+                 color: $hoveColor;
+                 font-size: 15px;
+             }
+             span {
+                 margin-left: 5px;
+                 margin-right: 5px;
+                 color: $navColor;
+                 font-family: $infomation-font-family;
+                 font-size: 16px;
+                 font-weight: 500;
+             }
+         }
+     }
+     
+     .navigation {
+         text-align: center;
+         margin-top: 20px;
+         border-bottom: 1px solid #087530;
+         height: 45px;
+         .met-store-menu {
+             margin-left: 20px;
+             .menu-main-menu-container {
+                 .nav-menu li {
+                     display: inline;
+                     list-style: none;
+                     margin: auto 20px;
+                     a {
+                         color: $navColor;
+                         text-decoration: none;
+                         text-transform: uppercase;
+                     }
+                 }
+             }
+         }
+         .toggle {
+             margin-left: 300px;
+             .checkbox {
+                 display: none;
+             }
+             label {
+                 .bars {
+                     color: $navColor;
+                     display: none;
+                 }
+                 .cancel {
+                     color: $navColor;
+                     display: none;
+                 }
+             }
+         }
+     }
+     
+     @media(max-width:960px) {
+         .information {
+             height: 40px;
+             font-weight: 700;
+             font-size: 12px;
+             color: $themeColor;
+             .find-store {
+                 display: none;
+             }
+             .deliver-info {
+                 margin-left: 15px;
+                 padding-left: 5px;
+             }
+         }
+         .search {
+             height: 50px;
+             .logo {
+                 margin-top: 10px;
+                 margin-left: 20px;
+                 a {
+                     font-family: $infomation-font-family;
+                     font-size: 20px;
+                     text-transform: uppercase;
+                     text-decoration: none;
+                     color: $navColor;
+                     font-weight: bold;
+                     & a:hover {
+                         color: $hoveColor;
+                     }
+                     .cart {
+                         font-size: 15px;
+                         color: $hoveColor;
+                         margin-left: 2px;
+                     }
+                 }
+             }
+             .search-form {
+                 display: none;
+             }
+             .contacts {
+                 margin-top: 15px;
+                 margin-right: 50px;
+                 span {
+                     display: none;
+                 }
+                 .icons {
+                     color: $hoveColor;
+                     font-size: 15px;
+                 }
+             }
+         }
+         .navigation .met-store-menu .menu-main-menu-container {
+             width: 85%;
+             height: 100%;
+             margin-left: -100%;
+             position: fixed;
+             background: $themeColor;
+             text-align: center;
+             z-index: 20;
+         }
+         .navigation.active .met-store-menu .menu-main-menu-container {
+             left: 0;
+             margin-top: 0px;
+             margin-left: 0px;
+         }
+         .navigation.active .met-store-menu .menu-main-menu-container .nav-menu {
+             margin-top: 50px;
+         }
+         .navigation.active .met-store-menu .menu-main-menu-container .nav-menu li {
+             display: block;
+             margin-top: 20px;
+         }
+         .navigation .toggle label .bars {
+             color: #111;
+             display: block;
+             margin-left: 50px;
+             margin-top: 5px;
+         }
+         .navigation .toggle #checkbox:checked~label .bars {
+             display: none;
+         }
+         .navigation .toggle #checkbox:checked~label .cancel {
+             display: block;
+             margin-left: 50px;
+             margin-top: 5px;
+         }
+     }
